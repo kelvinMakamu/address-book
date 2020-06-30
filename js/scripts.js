@@ -11,7 +11,7 @@ let validateInput = (input) => {
 	return alphaNumericPattern.test(input);
 }
 
-let clearContactFormErrors = (inputType) =>{
+let clearApplicationSections = (inputType) =>{
 	 switch(inputType){
 	 	case 'first-name':
 	 	$('#contact-first-name').html("");
@@ -21,10 +21,15 @@ let clearContactFormErrors = (inputType) =>{
 	 	$('#contact-last-name').html("");
 	 	break;
 
-	 	case 'all':
+	 	case 'whole-content':
 	 	clearNotificationPanel();
 	 	$('#contact-first-name').html("");
 	 	$('#contact-last-name').html("");
+	 	break;
+
+	 	case 'contact-form':
+		$("input#new-first-name").val("");
+	  $("input#new-last-name").val("");
 	 	break;
 	 }
 }
@@ -36,11 +41,6 @@ let displayNotification = (notificationPanel,alert,message) => {
 
 let clearNotificationPanel = () => {
 	$('#'+notificationPanel).html("");
-}
-
-let clearContactForm = () => {
-	$("input#new-first-name").val("");
-  $("input#new-last-name").val("");
 }
 
 let validateContactForm = (firstName,lastName) =>{
@@ -72,7 +72,7 @@ $(document).ready( () => {
 
 	$("form#new-contact").submit(function(event){
     event.preventDefault();
-		clearContactFormErrors('all');
+		clearApplicationSections('whole-content');
     var inputtedFirstName = $("input#new-first-name").val();
     var inputtedLastName = $("input#new-last-name").val();
     switch(validateContactForm(inputtedFirstName,inputtedLastName)){
@@ -87,7 +87,7 @@ $(document).ready( () => {
 			  $(".first-name").text(addContact.firstName);
 			  $(".last-name").text(addContact.lastName);
 			}); 
-	    clearContactForm();
+			clearApplicationSections('contact-form');
     	break;
 
     	case 1001:
