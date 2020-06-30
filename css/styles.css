@@ -1,0 +1,92 @@
+/**********************
+	
+	COMMON/GENERAL STYLES
+
+**************************/
+*{
+	margin:0;
+	letter-spacing: 2px !important;
+	border-radius: 0% !important;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,h4{
+	text-transform: uppercase;
+}
+
+p{
+	font-size: 14px;
+}
+
+textarea{
+	resize: none;
+}
+
+textarea:hover,input:hover, textarea:active, input:active,
+textarea:focus,input:focus,label:focus{
+  outline:0px !important;
+  -webkit-appearance:none;
+  box-shadow: none !important;
+}
+
+#contact-first-name,#contact-last-name{
+	letter-spacing: 5px;
+	font-weight: bold;
+	color:red;
+	margin-top: 3%;
+}
+
+.form-control::placeholder,.form-control:-ms-input-placeholder { 
+  color: #dedede;
+  opacity: 1;
+}
+
+.form-group{
+	margin-top: 5%;
+	margin-bottom: 8%;
+}
+
+.container{
+	margin:5% 5% 5% 5%;
+}
+
+.row{
+	margin: 2% 2% 2% 2%;
+}
+
+.form-control,.form-control:focus,.form-control:active{
+	color:#000;
+	border:1px solid #dedede;
+	background-color: transparent;
+}
+
+.alert{
+	margin:0.75% 0% 0.75% 0%;
+	padding:3.5% 3% 3% 3%;
+}
+
+.alert p{
+	line-height: 25px;
+	text-transform: uppercase;
+}
+/**************************
+
+	CONTENT STYLES
+	
+********************************/
+#show-contact {
+  display: none;
+  font-size: 16px;
+  padding:5% 5% 5% 8%;
+  border:1px solid #dedede;
+  box-shadow: 2px 3px 5px #dedede;
+}
+
+.contact {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.contact:hover {
+  text-decoration: underline;
+}  

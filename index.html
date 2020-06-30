@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Address Book</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		 <div class="row">
+		 	<div class="col-md-6">
+		      <h4>Address book</h4>
+		      <hr>
+		      <div id="contact-notification-panel"></div>
+		      <h4>Add a contact:</h4>
+		      <hr>
+		     <form id="new-contact">
+			        <div class="form-group">
+			          <label for="new-first-name">First Name</label>
+			          <input type="text" class="form-control" id="new-first-name" placeholder="First Name">
+			          <small id="contact-first-name"></small>
+			        </div>
+			        <div class="form-group">
+			          <label for="new-last-name">Last Name</label>
+			          <input type="text" class="form-control" id="new-last-name" placeholder="Last Name">
+			          <small id="contact-last-name"></small>
+			        </div>
+			        <div class="form-group">
+					        <button type="submit" class="btn btn-primary">Add Contact</button>
+					    </div>
+		      </form>
+			      <h4>Contacts:</h4>
+			      <hr>
+				      <ul id="contacts">
+
+				      </ul>
+				    </div>
+		   	 <div class="col-md-6">
+					  <div id="show-contact">
+					    <h4></h4><hr/>
+					    <p>First Name: <span class="first-name"></span></p>
+					    <p>Last Name: <span class="last-name"></span></p>
+					  </div>
+					</div> 
+			   </div>
+		    </div>
+	    </div>
+	</div>
+	<!-- END DELANI BOTTOM CONTENT -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
